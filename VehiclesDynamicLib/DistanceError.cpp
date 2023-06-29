@@ -2,5 +2,5 @@
 
 const char* DistanceError::what() const 
 { 
-	return "Distance is below zero!"; 
+	return "Расстояние ниже нуля!"; 
 }

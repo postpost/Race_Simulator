@@ -135,36 +135,40 @@
     <ClCompile Include="air_vehicle.cpp" />
     <ClCompile Include="all_terrain_boots.cpp" />
     <ClCompile Include="broom.cpp" />
+    <ClCompile Include="calculate_time.cpp" />
     <ClCompile Include="camel.cpp" />
     <ClCompile Include="carpet_plane.cpp" />
     <ClCompile Include="centaur.cpp" />
     <ClCompile Include="check_unique.cpp" />
+    <ClCompile Include="CountError.cpp" />
     <ClCompile Include="DistanceError.cpp" />
     <ClCompile Include="eagle.cpp" />
     <ClCompile Include="ground_vehicle.cpp" />
+    <ClCompile Include="print_choice.cpp" />
     <ClCompile Include="print_race_results.cpp" />
     <ClCompile Include="print_registrated.cpp" />
-    <ClCompile Include="registrate.cpp" />
+    <ClCompile Include="print_vc_name.cpp" />
     <ClCompile Include="speed_camel.cpp" />
-    <ClCompile Include="start_race.cpp" />
     <ClCompile Include="vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="air_vehicle.h" />
     <ClInclude Include="all_terrain_boots.h" />
     <ClInclude Include="broom.h" />
+    <ClInclude Include="calculate_time.h" />
     <ClInclude Include="camel.h" />
     <ClInclude Include="carpet_plane.h" />
     <ClInclude Include="centaur.h" />
     <ClInclude Include="check_unique.h" />
+    <ClInclude Include="CountError.h" />
     <ClInclude Include="DistanceError.h" />
     <ClInclude Include="eagle.h" />
     <ClInclude Include="ground_vehicle.h" />
+    <ClInclude Include="print_choice.h" />
     <ClInclude Include="print_race_results.h" />
     <ClInclude Include="print_registrated.h" />
-    <ClInclude Include="registrate.h" />
+    <ClInclude Include="print_vc_name.h" />
     <ClInclude Include="speed_camel.h" />
-    <ClInclude Include="start_race.h" />
     <ClInclude Include="vehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

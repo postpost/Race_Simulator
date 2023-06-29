@@ -1,6 +1,6 @@
 #include "air_vehicle.h"
 
-AirVehicle::AirVehicle() 
+AirVehicle::AirVehicle() : _distance_reduce_coef{0}
 {
 	
 };

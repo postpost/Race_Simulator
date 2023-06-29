@@ -4,15 +4,10 @@
 #include "print_race_results.h"
 #include "print_registrated.h"
 
-GroundVehicle::GroundVehicle():Vehicle()
+GroundVehicle::GroundVehicle() : _speed{ 0 }, _rest_distance_time{0}
 {
-	
 };
 
-double GroundVehicle::calculate_time(int distance) 
-{
-	return 0;
-};
 
 
 

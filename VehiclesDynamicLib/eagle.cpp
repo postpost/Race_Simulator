@@ -1,7 +1,7 @@
 #include "eagle.h"
 #include "DistanceError.h"
 
-Eagle::Eagle() 
+Eagle::Eagle()
 {
 	vehicle_name = "Îð¸ë";
 	_speed = 8;
@@ -14,6 +14,6 @@ double Eagle::calculate_time(int distance)
 	{
 		throw DistanceError();
 	}
-	race_result = (double)distance * _distance_reduce_coef / 100;
+	race_result = (static_cast<double>(distance) * ((100 -_distance_reduce_coef) / 100))/_speed;
 	return race_result;
 };

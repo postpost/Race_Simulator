@@ -29,6 +29,6 @@ double CarpetPlane::calculate_time(int distance)
 	{
 		_distance_reduce_coef = 5;
 	}
-	race_result = (double)distance * _distance_reduce_coef / 100;;
+	race_result = (static_cast<double>(distance) * ((100 - _distance_reduce_coef) / 100)) / _speed;
 	return race_result;
 };
