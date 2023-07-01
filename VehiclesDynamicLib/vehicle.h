@@ -13,8 +13,8 @@ protected:
 public:
 	CALCULATESPEEDLIBRARY_API Vehicle();
 	CALCULATESPEEDLIBRARY_API ~Vehicle();
-	CALCULATESPEEDLIBRARY_API virtual double calculate_time(int distance);
-	CALCULATESPEEDLIBRARY_API std::string get_name();
+	CALCULATESPEEDLIBRARY_API virtual auto get_name() -> std::string = NULL;
+	CALCULATESPEEDLIBRARY_API virtual auto calculate_time(int distance)-> double = 0;
 	CALCULATESPEEDLIBRARY_API double get_res();
 	//CALCULATESPEEDLIBRARY_API void printRaceResults(const int size, int distance);
 

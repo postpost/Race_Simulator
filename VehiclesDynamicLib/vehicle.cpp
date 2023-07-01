@@ -8,14 +8,14 @@ Vehicle::Vehicle() : vehicle_name{ " " }, race_result{0}
 Vehicle::~Vehicle() = default;
 
 
-std::string Vehicle::get_name() {
+auto Vehicle::get_name()-> std::string {
 	return vehicle_name;
 };
 
-double Vehicle::calculate_time(int distance)
+auto Vehicle::calculate_time(int distance) ->double 
 {
 	return 0;
-};
+}
 
 double Vehicle::get_res() 
 {

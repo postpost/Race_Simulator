@@ -7,6 +7,13 @@ CarpetPlane::CarpetPlane()
 	_speed = 10;
 };
 
+CarpetPlane:: ~CarpetPlane() = default;
+
+std:: string CarpetPlane::get_name()
+{
+	return vehicle_name;
+}
+
 double CarpetPlane::calculate_time(int distance)
 {
 	if (distance < 0) 

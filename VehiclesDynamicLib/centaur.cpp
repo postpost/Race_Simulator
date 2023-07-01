@@ -8,6 +8,13 @@ Centaur::Centaur(): _rest_duration_01{ 2 }
 	_rest_distance_time = 8;
 };
 
+Centaur::~Centaur() = default;
+
+std::string Centaur::get_name() 
+{
+	return vehicle_name;
+}
+
 double Centaur::calculate_time(int distance)
 {
 	if (distance < 0)

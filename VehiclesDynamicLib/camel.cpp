@@ -9,6 +9,12 @@ Camel::Camel(): _rest_duration_01{ 5 }, _rest_duration_02{ 8 }
 	
 };
 
+Camel::~Camel() = default;
+
+std::string Camel::get_name() 
+{
+	return vehicle_name;
+}
 
 double Camel::calculate_time(int distance) 
 {

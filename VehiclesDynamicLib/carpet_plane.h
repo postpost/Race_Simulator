@@ -8,5 +8,7 @@ class CarpetPlane :public AirVehicle
 {
 public:
 	CALCULATESPEEDLIBRARY_API CarpetPlane();
-	CALCULATESPEEDLIBRARY_API double calculate_time(int distance) override;
+	CALCULATESPEEDLIBRARY_API ~CarpetPlane();
+	CALCULATESPEEDLIBRARY_API auto calculate_time(int distance) -> double final override;
+	CALCULATESPEEDLIBRARY_API auto get_name() -> std::string final override;
 };

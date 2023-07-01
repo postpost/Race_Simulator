@@ -8,7 +8,13 @@ AllTerrainBoots::AllTerrainBoots(): _rest_duration_01{ 10 }, _rest_duration_02{5
 	_rest_distance_time = 60;
 };
 
-double AllTerrainBoots::calculate_time(int distance)
+AllTerrainBoots::~AllTerrainBoots() = default;
+
+std::string AllTerrainBoots::get_name()
+{
+	return vehicle_name;
+};
+auto AllTerrainBoots::calculate_time(int distance)-> double
 {
 	if (distance < 0)
 	{

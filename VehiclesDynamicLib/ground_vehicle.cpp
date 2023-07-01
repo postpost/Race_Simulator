@@ -8,6 +8,16 @@ GroundVehicle::GroundVehicle() : _speed{ 0 }, _rest_distance_time{0}
 {
 };
 
+GroundVehicle::~GroundVehicle() = default;
+
+auto GroundVehicle::get_name()-> std::string {
+	return vehicle_name;
+};
+
+auto GroundVehicle::calculate_time(int distance) ->double
+{
+	return 0;
+}
 
 
 

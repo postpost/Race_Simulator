@@ -51,6 +51,7 @@ int main()
 		std::cin >> cmd_registrate;
 
 		std::vector <Vehicle*> vehicles;
+
 		int cmd_choice = 0; //select Vehicle 
 		int size = 0; //initialize size for Vehicles array
 		bool unique = true; //check if VC is unique when registrated
@@ -64,25 +65,33 @@ int main()
 				switch (cmd_choice) {
 				case 1:
 				{AllTerrainBoots terrainBoots;
-				check_unique(vehicles, terrainBoots);
-				vehicles.push_back(new AllTerrainBoots(terrainBoots));
+				/*GroundVehicle* terrain = &terrainBoots;*/
+				if (check_unique(vehicles, &terrainBoots))
+				{
+					vehicles.push_back(new GroundVehicle(terrainBoots)); //доступ в данном случае к vehicles[0] невозможен, даже по ссылке
+				}
+				
+				vehicles[0] = &terrainBoots; //для проверки переопределенного метода
+				vehicles[0]->calculate_time(distance); //только в этом случае вызывается метод потомка, без этого вызывается метод останавливается на GroundVehicle
 				//vehicles = &terrainBoots;
 				}break;
 				case 3:
 				{Camel camel;
-				check_unique(vehicles, camel);
-				vehicles.push_back(new Camel(camel));
+				check_unique (vehicles, &camel);
+				vehicles.push_back(new GroundVehicle(camel));
 				}break;
 				case 4:
 				{Centaur centaur;
 				//GroundVehicle* gr_vc = &centaur;
-				check_unique(vehicles, centaur);
-				vehicles.push_back(new Centaur(centaur));
+				check_unique(vehicles, &centaur);
+				vehicles.push_back(new GroundVehicle(centaur));
 				}break;
 				case 6:
 				{SpeedCamel speedCamel;
-				check_unique(vehicles, speedCamel);
-				vehicles.push_back(new SpeedCamel(speedCamel));
+				if (check_unique(vehicles, &speedCamel)) {
+					vehicles.push_back(new GroundVehicle(speedCamel));
+				};
+				
 				}break;
 				case 0: if (vehicles.size() < 2) {
 					std::cout << "Должно быть зарегистрировано хотя бы два транспортных средства!" << std::endl;
@@ -125,19 +134,19 @@ int main()
 				switch (cmd_choice) {
 				case 2:
 				{Broom broom;
-				check_unique(vehicles, broom);
-				vehicles.push_back(new Broom(broom));
+				check_unique(vehicles, &broom);
+				vehicles.push_back(new AirVehicle(broom));
 				}break;
 				case 5:
 				{Eagle eagle;
-				check_unique(vehicles, eagle);
-				vehicles.push_back(new Eagle(eagle));
+				check_unique(vehicles,&eagle);
+				vehicles.push_back(new AirVehicle(eagle));
 				}break;
 				case 7:
 				{CarpetPlane carpet;
 				//GroundVehicle* gr_vc = &centaur;
-				check_unique(vehicles, carpet);
-				vehicles.push_back(new CarpetPlane(carpet));
+				check_unique(vehicles,&carpet);
+				vehicles.push_back(new AirVehicle(carpet));
 				}break;
 				case 0: if (vehicles.size() < 2) {
 					std::cout << "Должно быть зарегистрировано хотя бы два транспортных средства!" << std::endl;

@@ -8,6 +8,13 @@ SpeedCamel::SpeedCamel() : _rest_duration_01{ 5 }, _rest_duration_02{ 6.5 }, _re
 	_rest_distance_time = 10;
 }
 
+SpeedCamel::~SpeedCamel() = default;
+
+std::string SpeedCamel::get_name() 
+{
+	return vehicle_name;
+}
+
 double SpeedCamel::calculate_time(int distance)
 {
 	if (distance < 0)

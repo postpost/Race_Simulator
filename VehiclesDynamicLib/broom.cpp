@@ -8,6 +8,13 @@ Broom::Broom()
 	_speed = 20;
 };
 
+Broom:: ~Broom() = default;
+
+std::string Broom::get_name() 
+{
+	return vehicle_name;
+}
+
 double Broom:: calculate_time(int distance)
 {
 	_distance_reduce_coef = 0;
